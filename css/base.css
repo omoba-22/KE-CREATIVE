@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --card: #f8fafc;
+
+    --primary: #9b2335;
+    --primary-dark: #7a1928;
+    --primary-light: #fdf2f4;
+    --primary-mid: #c94057;
+
+    --accent: #1e3a6e;
+    --accent-mid: #2c5282;
+    --accent-light: #ebf0fb;
+
+    --surface: #fdf6f7;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img { width: 100%; display: block; }
+
+section { padding: 6rem 8%; }
+
+h1, h2, h3, h4 { line-height: 1.2; }
+
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+p { color: var(--muted); }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* ---- Buttons ---- */
+.btn-primary,
+.btn-secondary {
+    padding: 0.95rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* ---- Eyebrow label ---- */
+.eyebrow {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.eyebrow.light {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+/* ---- Scroll reveal (only active when JS runs) ---- */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js .reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    section { padding: 5rem 6%; }
+}
