@@ -19,7 +19,7 @@
             video.style.display = 'block';
             img.style.display = 'none';
             img.src = '';
-            video.play().catch(() => {});
+            video.play().catch(() => { });
         }
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
@@ -37,7 +37,10 @@
         el.addEventListener('click', () => open('image', el.src, el.dataset.title));
     });
     document.querySelectorAll('.lightbox-video-trigger').forEach(el => {
-        el.addEventListener('click', () => open('video', el.dataset.src, el.dataset.title));
+        el.addEventListener('click', () => {
+            const v = el.querySelector('video');
+            open('video', (v && v.getAttribute('src')) || el.dataset.src, el.dataset.title);
+        });
     });
 
     document.getElementById('lightboxClose').addEventListener('click', close);

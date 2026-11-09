@@ -529,7 +529,8 @@
     }
 
     .about-photo {
-        position: static;
+        position: relative;
+        top: auto;
         max-width: 380px;
     }
 
@@ -675,10 +676,5 @@
 @media (max-width: 400px) {
     .stat-box h3 {
         font-size: 1.35rem;
-    }
-}
-@media (max-width: 320px) {
-    .about-text{
-        margin-top: 80px;
     }
 }
