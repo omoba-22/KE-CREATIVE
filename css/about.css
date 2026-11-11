@@ -278,31 +278,6 @@
     margin: auto;
 }
 
-.works-group {
-    margin-bottom: 4rem;
-}
-
-.works-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 2px solid var(--primary-light);
-}
-
-.works-head h3 {
-    font-size: 1.25rem;
-}
-
-.works-head a {
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
 .works-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -322,12 +297,68 @@
     cursor: zoom-in;
 }
 
-.works-cta {
-    text-align: center;
+.works-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
 }
 
-.works-cta .btn-primary {
-    display: inline-block;
+.works-tab {
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    border: 2px solid #e2d0d3;
+    background: white;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.works-tab:hover,
+.works-tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.works-panel[hidden] {
+    display: none;
+}
+
+.works-panel {
+    animation: worksFade 0.45s ease;
+}
+
+.works-more {
+    display: block;
+    width: fit-content;
+    margin: 2.5rem auto 0;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 2px;
+    transition: border-color 0.3s;
+}
+
+.works-more:hover {
+    border-color: var(--primary);
+}
+
+@keyframes worksFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* =========================
@@ -608,12 +639,6 @@
         grid-template-columns: 1fr;
     }
 
-    .works-head {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
-    }
-
     .brands-grid {
         display: flex;
         grid-template-columns: none;
@@ -670,6 +695,11 @@
     .brands-arrow:disabled {
         opacity: 0.3;
         cursor: default;
+    }
+
+    .works-tab {
+        padding: 0.5rem 1.1rem;
+        font-size: 0.8rem;
     }
 }
 

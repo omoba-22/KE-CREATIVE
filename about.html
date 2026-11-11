@@ -193,11 +193,45 @@
 
         <div class="works-inner">
 
-            <div class="works-group reveal">
-                <div class="works-head">
-                    <h3>Graphic Design Projects</h3>
-                    <a href="portfolio.html?tab=design">View all →</a>
+            <div class="works-tabs reveal" role="tablist" aria-label="Selected works categories">
+                <button class="works-tab active" role="tab" aria-selected="true" data-target="works-social">Social
+                    Media</button>
+                <button class="works-tab" role="tab" aria-selected="false" data-target="works-design">Graphic
+                    Design</button>
+                <button class="works-tab" role="tab" aria-selected="false" data-target="works-video">Video &amp;
+                    Content</button>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="works-panel" id="works-social" role="tabpanel">
+                <div class="works-grid">
+                    <div class="portfolio-card">
+                        <img src="./media/brands/gotland.jpg" alt="Real estate social media">
+                        <div class="portfolio-info">
+                            <span class="portfolio-tag">Social Media Management</span>
+                            <h3>Real Estate Firm</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="./media/brands/genesis.jpg" alt="Genesis Wellness Clinic">
+                        <div class="portfolio-info">
+                            <span class="portfolio-tag">Social Media Management</span>
+                            <h3>Genesis Wellness Clinic</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <img src="./media/brands/foodarena.jpg" alt="Food Arena catering">
+                        <div class="portfolio-info">
+                            <span class="portfolio-tag">Social Media Management</span>
+                            <h3>Food Arena Catering</h3>
+                        </div>
+                    </div>
                 </div>
+                <a href="portfolio.html?tab=social" class="works-more">View all social media work →</a>
+            </div>
+
+            <!-- GRAPHIC DESIGN -->
+            <div class="works-panel" id="works-design" role="tabpanel" hidden>
                 <div class="works-grid">
                     <div class="portfolio-card">
                         <img src="./media/image.png" alt="Fashion Brand Identity" class="lightbox-trigger"
@@ -224,13 +258,11 @@
                         </div>
                     </div>
                 </div>
+                <a href="portfolio.html?tab=design" class="works-more">View all graphic design →</a>
             </div>
 
-            <div class="works-group reveal">
-                <div class="works-head">
-                    <h3>Video & Content Creation</h3>
-                    <a href="portfolio.html?tab=video">View all →</a>
-                </div>
+            <!-- VIDEO -->
+            <div class="works-panel" id="works-video" role="tabpanel" hidden>
                 <div class="works-grid">
                     <div class="portfolio-card video-card">
                         <div class="video-wrapper lightbox-video-trigger" data-src="./media/videos/IMG_4661.MP4"
@@ -262,63 +294,10 @@
                             <h3>Talking Head Video for Tim-Ferad Logistics</h3>
                         </div>
                     </div>
-                    <div class="portfolio-card video-card">
-                        <div class="video-wrapper lightbox-video-trigger" data-src="./media/videos/cocovid.MP4"
-                            data-title="Coco Fabrics Product Display">
-                            <video src="./media/videos/IMG_4667.MP4" muted loop playsinline preload="metadata"></video>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag tag-video">Video Editing</span>
-                            <h3>Coco Fabrics Product Display</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-card video-card">
-                        <div class="video-wrapper lightbox-video-trigger" data-src="./media/videos/cyonhangout.mp4"
-                            data-title="CYON Hangout">
-                            <video src="./media/videos/cyonhangout.mp4" muted loop playsinline
-                                preload="metadata"></video>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag tag-video">Video Editing</span>
-                            <h3>CYON Hangout</h3>
-                        </div>
-                    </div>
                 </div>
+                <a href="portfolio.html?tab=video" class="works-more">View all videos →</a>
             </div>
 
-            <div class="works-group reveal">
-                <div class="works-head">
-                    <h3>Social Media Management & Brand Projects</h3>
-                    <a href="portfolio.html?tab=social">View all →</a>
-                </div>
-                <div class="works-grid">
-                    <div class="portfolio-card">
-                        <img src="./media/brands/gotland.jpg" alt="Real estate social media">
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag">Social Media Management</span>
-                            <h3>Real Estate Firm</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-card">
-                        <img src="./media/brands/genesis.jpg" alt="Genesis Wellness Clinic">
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag">Social Media Management</span>
-                            <h3>Genesis Wellness Clinic</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-card">
-                        <img src="./media/brands/foodarena.jpg" alt="Food Arena catering">
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag">Social Media Management</span>
-                            <h3>Food Arena Catering</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="works-cta reveal">
-                <a href="portfolio.html" class="btn-primary">See the Full Portfolio</a>
-            </div>
         </div>
     </section>
 
@@ -444,11 +423,12 @@
             </figure>
 
             <figure class="shot reveal">
-                <img src="./media/testimonials/revamp.jpg" alt="Before and after of a revamped social media page" class="lightbox-trigger"
-                    data-title="Page revamp">
+                <img src="./media/testimonials/revamp.jpg" alt="Before and after of a revamped social media page"
+                    class="lightbox-trigger" data-title="Page revamp">
                 <figcaption>
                     <span class="shot-tag">Page revamp</span>
-                    <p>What you get: a clean, well-structured page that looks professional and is optimised to attract your ideal audience.</p>
+                    <p>What you get: a clean, well-structured page that looks professional and is optimised to attract
+                        your ideal audience.</p>
                 </figcaption>
             </figure>
 

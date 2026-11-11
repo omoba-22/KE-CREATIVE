@@ -50,4 +50,20 @@
         window.addEventListener('resize', update);
         update();
     }
+
+    /* selected works tabs */
+    const worksTabs = document.querySelectorAll('.works-tab');
+
+    if (worksTabs.length) {
+        worksTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                worksTabs.forEach(t => {
+                    const active = t === tab;
+                    t.classList.toggle('active', active);
+                    t.setAttribute('aria-selected', active);
+                    document.getElementById(t.dataset.target).hidden = !active;
+                });
+            });
+        });
+    }
 })();
